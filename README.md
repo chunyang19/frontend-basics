@@ -1,0 +1,2 @@
+# initialjs
+initial javascript.
