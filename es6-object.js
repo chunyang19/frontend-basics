@@ -1,3 +1,9 @@
+/**
+ * ES6的扩展对象的功能性
+ * @author 梁凤波
+ * @source https://github.com/liangfengbo/initialjs
+ * @time 2018-11-02 11:50:06
+ */
 {
     /********** 对象属性简写 **********/
 
@@ -119,7 +125,6 @@
      */
     myAnimal.reading("《深入理解ES6》"); // 《深入理解ES6》
 
-
     /********************************************************
      缺点：Object.assign()方法不能将提供者的访问器属性赋值到接收对象中
      *********************************************************/
@@ -161,6 +166,7 @@
         }
     }
 
+    // 将原型设置为person
     let somethings = Object.create(person);
     console.log(somethings.getGreeting()); // hello world
     console.log(Object.getPrototypeOf(somethings) === person); // true
