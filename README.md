@@ -14,3 +14,5 @@
 ## 《深入理解ES6》
 
 November 02, 2018 » [ES6-扩展对象的功能性](https://github.com/liangfengbo/initialjs/blob/master/es6-object.js)
+
+November 02, 2018 » [ES6-改进的数组功能](https://github.com/liangfengbo/initialjs/blob/master/es6-array.js)
