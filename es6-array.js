@@ -40,7 +40,7 @@
      * 返回一个新的数组实例
      */
 
-    /** String **/
+    /** 转换String为数组 **/
     let str = "Hello";
     let arr1 = Array.from(str);
     console.log(arr1); // [ 'H', 'e', 'l', 'l', 'o' ]
@@ -65,7 +65,7 @@
     getUserInfo1("bob", 16, 'frontend'); // [ 'bob', 16, 'frontend' ]
     getUserInfo2("lynn", 16, 'doctor'); //  'lynn', 16, 'doctor' ]
 
-    // 迭代每项元素
+    // Array.from接收第二个参数，可以迭代每项元素做一些操作
     let arr2 = [1, 2, 3];
     console.log(Array.from(arr2, x => x + 1)); // [ 2, 3, 4 ]
 }
@@ -199,19 +199,14 @@
 
 {
     /**
-     * copyWithin(target, start, end)方法
-     * 它接受三个参数。
-     * target （必需）：从该位置开始替换数据。
-     * start （可选）：从该位置开始读取数据，默认为 0 。如果为负值，表示倒数。
-     * end （可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示倒数。
+     * 总结：
+     * 1、Array.of(); 创建数组，与new Array() 创建数组不同的是，Array.of能确保传入的参数都为数组的元素
+     * 2、Array.from() 把其他对象转换成数组
+     * 3、Array.fill() 填充数组
+     * 4、Array.find() 数组中查询元素，查询到则返回改元素，反之返回undefined
+     * 5、Array.findIndex 查询元素索引，查询到则返回元素在该数组的索引，反正返回-1
+     * 6、find和findIndex的实现方式
      */
-    let arr1 = [0, 1, 2, 3, 4, 5];
-    console.log(arr1.copyWithin(3, 0)); //  [ 0, 1, 2, 0, 1, 2  ]
-    console.log(arr1.copyWithin(1, 0)); //  [ 0, 1, 2, 0, 1, 2  ]
-    console.log(arr1.copyWithin(1, 1)); //  [ 0, 0, 1, 2, 0, 1  ]
-    console.log(arr1.copyWithin(2, 3)); //  [ 0, 0, 2, 0, 1, 1  ]
-
 }
-
 
 
