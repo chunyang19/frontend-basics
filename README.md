@@ -23,4 +23,4 @@ November 05, 2018 » [ES6-Set集合与Map集合](https://github.com/liangfengbo/
 
 November 05, 2018 » [ES6-函数](https://github.com/liangfengbo/initialjs/blob/master/es6-function.js)
 
-November 05, 2018 » [ES6-迭代器器Iterator和生成器Generator](https://github.com/liangfengbo/initialjs/blob/master/es6-iterartor-generator.js)
+November 05, 2018 » [ES6-迭代器器Iterator和生成器Generator](https://github.com/liangfengbo/initialjs/blob/master/es6-iterator-generator.js)
