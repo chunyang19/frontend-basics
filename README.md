@@ -20,3 +20,5 @@ November 02, 2018 » [ES6-改进的数组功能](https://github.com/liangfengbo/
 November 04, 2018 » [ES6-解构: 使数据访问更加便捷](https://github.com/liangfengbo/initialjs/blob/master/es6-deconstruct.js)
 
 November 05, 2018 » [ES6-Set集合与Map集合](https://github.com/liangfengbo/initialjs/blob/master/es6-set-map.js)
+
+November 05, 2018 » [ES6-函数](https://github.com/liangfengbo/initialjs/blob/master/es6-set-function.js)
