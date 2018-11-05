@@ -22,3 +22,5 @@ November 04, 2018 » [ES6-解构: 使数据访问更加便捷](https://github.co
 November 05, 2018 » [ES6-Set集合与Map集合](https://github.com/liangfengbo/initialjs/blob/master/es6-set-map.js)
 
 November 05, 2018 » [ES6-函数](https://github.com/liangfengbo/initialjs/blob/master/es6-function.js)
+
+November 05, 2018 » [ES6-迭代器器Iterator和生成器Generator](https://github.com/liangfengbo/initialjs/blob/master/es6-iterartor-generator.js)
