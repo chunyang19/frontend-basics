@@ -238,28 +238,5 @@ class AnyArray {
     }
 }
 
-let arr = new AnyArray([1, 2, 3]);
-console.log(arr.insert(2, "插入元素"));
-arr.firstInsert("首位");
-arr.endInsert("末尾");
-console.log(arr.get(0));
-console.log(arr.set(0, 'hello'))
-console.log(arr.find(1)); // 1
-console.log(arr.findIndex(2)); // 2
-console.log(arr.contains("world")); // true
-console.log(arr);
 
-arr.removeFirst();
-arr.removeLast();
-arr.remove(2);
-console.log(arr);
-arr.removeElement(2);
-console.log(arr);
-arr.swap(0, 1);
-console.log(arr);
-
-arr.forBob(item => {
-    console.log('aa')
-    console.log(item);
-})
 
