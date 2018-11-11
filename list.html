@@ -91,12 +91,12 @@
         removeItem(target) {
             let self = this;
             let findParent = (node) => {
-                let parent = node.parentNode;
-                let root = self.el.find(item => item === parent);
+                let {parentNode} = node;
+                let root = self.el.find(item => item === parentNode);
                 if (root) {
                     root.removeChild(node);
                 } else {
-                    findParent(parent);
+                    findParent(parentNode);
                 }
             };
             findParent(target);
