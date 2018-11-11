@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .list {
+            margin: 32px 0;
+        }
+
+        .item {
+            display: flex;
+            padding: 10px;
+            border: 1px solid #f0f0f0;
+            margin: 10px;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .item p {
+            flex: 1;
+            margin-right: 32px;
+        }
+
+        .item span {
+            display: inline-block;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 100%;
+            background-color: #f00;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="list">
+    <li class="item"><p>**** 第一行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第二行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第三行 **** </p><span class="del">X</span></li>
+</ul>
+<ul class="list">
+    <li class="item"><p>**** 第三行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第四行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第五行 **** </p><span class="del">X</span></li>
+</ul>
+<ul class="list">
+    <li class="item"><p>**** 第六行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第七行 **** </p><span class="del">X</span></li>
+    <li class="item"><p>**** 第八行 **** </p><span class="del">X</span></li>
+</ul>
+<script>
+    /**
+     * 使用面向对象的方式维护一个列表
+     * 每个列表有一个删除按钮，
+     * 点击删除按钮移除当前行
+     */
+    class List {
+        constructor(sel) {
+            this.el = Array.from(document.querySelectorAll(sel));
+            let self = this;
+            this.el.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.className.indexOf('del') > -1) {
+                        self.removeItem.call(self, e.target);
+                    }
+                })
+            })
+        }
+
+        removeItem(target) {
+            let self = this;
+            let findParent = (node) => {
+                let parent = node.parentNode;
+                let root = self.el.find(item => item === parent);
+                if (root) {
+                    root.removeChild(node);
+                } else {
+                    findParent(parent);
+                }
+            };
+            findParent(target);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        new List('.list');
+    })
+</script>
+</body>
+</html>

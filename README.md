@@ -28,3 +28,5 @@ November 05, 2018 » [ES6-迭代器器Iterator和生成器Generator](https://git
 November 06, 2018 » [实现数组方法原理实现](https://github.com/liangfengbo/initialjs/issues/1)
 
 November 05, 2018 » [ES6-类](https://github.com/liangfengbo/initialjs/blob/master/es6-class.js)
+
+November 05, 2018 » [实战: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
