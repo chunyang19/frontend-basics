@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body, div, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 375px;
+            margin: 0 auto;
+            background-color: #eee;
+        }
+
+        .img {
+            width: 100%;
+            height: 248px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #fff;
+        }
+
+        .pic {
+            width: 100%;
+        }
+    </style>
+</head>
+<div class="container">
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/1.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/2.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/3.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/4.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/5.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/6.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/7.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/8.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/9.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/10.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/11.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/12.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/13.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/14.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/15.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/16.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/17.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/18.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/19.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/1.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/2.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/3.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/4.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/5.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/6.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/7.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/8.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/9.jpg">
+    </div>
+    <div class="img">
+        <img class="pic" alt="加载中" data-src="./images/10.jpg">
+    </div>
+</div>
+<body>
+<script>
+    // 首先获取所有图片的元素标签
+    const images = document.getElementsByTagName('img');
+    // 获取可视区区域的高度
+    // 在和现代浏览器及 IE9 以上的浏览器中，可以用 window.innerHeight 属性获取。
+    // 在低版本 IE 的标准模式中，可以用 document.documentElement.clientHeight 获取，这里我们兼容两种情况：
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+    // num用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
+    let num = 0;
+
+    /**
+     * 懒加载图片
+     */
+    function lazyLoad() {
+        for (let i = num; i < images.length; i++) {
+            // 用可视区域高度减去元素顶部距离可视区域顶部的高度
+            // Element.getBoundingClientRect()方法返回元素的大小及其相对于视口的位置
+            let distance = viewHeight - images[i].getBoundingClientRect().top;
+            // 如果可视区域高度大于等于元素顶部距离可视区域顶部的高度，说明元素露出
+            if (distance >= 0) {
+                // 给元素写入真实的src，显示图片
+                images[i].src = images[i].getAttribute('data-src');
+                // 前i张图片已经加载完毕，下次从第i+1张开始检查是否露出
+                num = i + 1
+            }
+        }
+    }
+
+    /**
+     * 事件的节流
+     * @param fn 我们需要包装的事件回调
+     * @param interval 时间间隔的阈值
+     * @description throttle 的中心思想在于：在某段时间内，不管你触发了多少次回调，我都只认第一次，并在计时结束时给予响应
+     * @return {Function}
+     */
+    function throttle(fn, interval) {
+        // last为上一次触发回调的时间
+        let last = 0;
+
+        // 将throttle处理结果当作函数返回
+        return function () {
+            // 保留调用时的this上下文
+            let context = this;
+            // 保留调用时传入的参数
+            let args = arguments;
+            // 记录本次触发回调的时间
+            let now = +new Date();
+
+            // 判断上次触发的时间和本次触发的时间差是否小于时间间隔的阈值
+            if (now - last >= interval) {
+                // 如果时间间隔大于我们设定的时间间隔阈值，则执行回调
+                last = now;
+                fn.apply(context, args);
+            }
+        }
+    }
+
+    /**
+     * 防抖
+     * @param fn 我们需要包装的事件回调
+     * @param delay 是每次推迟执行的等待时间
+     * @description 防抖的中心思想在于：我会等你到底。在某段时间内，不管你触发了多少次回调，我都只认最后一次。
+     * @return {Function}
+     */
+    function debounce(fn, delay) {
+        // 定时器
+        let timer = null;
+
+        // 将debounce处理结果当作函数返回
+        return function () {
+            // 保留调用时的this上下文
+            let context = this;
+            // 保留调用时传入的参数
+            let args = arguments;
+
+            // 每次事件被触发时，都去清除之前的旧定时器
+            if (timer) {
+                clearTimeout(timer);
+            }
+            // 设立新定时器
+            timer = setTimeout(function () {
+                fn.apply(context, args);
+            }, delay)
+        }
+    }
+
+    /**
+     * 用 Throttle 来优化 Debounce
+     * @param fn 我们需要包装的事件回调
+     * @param delay 是时间间隔的阈值
+     * @description
+     *  debounce 的问题在于它“太有耐心了”。
+     *  试想，如果用户的操作十分频繁——他每次都不等 debounce 设置的 delay 时间结束就进行下一次操作，
+     *  于是每次 debounce 都为该用户重新生成定时器，回调函数被延迟了不计其数次。
+     *  频繁的延迟会导致用户迟迟得不到响应，用户同样会产生“这个页面卡死了”的观感。
+     *
+     *  为了避免弄巧成拙，我们需要借力 throttle 的思想，打造一个“有底线”的 debounce——等你可以，
+     *  但我有我的原则：delay 时间内，我可以为你重新生成定时器；但只要delay的时间到了，
+     *  我必须要给用户一个响应。这个 throttle 与 debounce “合体”思路，
+     *  已经被很多成熟的前端库应用到了它们的加强版 throttle 函数的实现中
+     * @return {Function}
+     */
+    function throttle2(fn, delay) {
+        // last为上一次触发回调的时间, timer是定时器
+        let last = 0, timer = null;
+        // 将throttle处理结果当作函数返回
+
+        return function () {
+            // 保留调用时的this上下文
+            let context = this;
+            // 保留调用时传入的参数
+            let args = arguments;
+            // 记录本次触发回调的时间
+            let now = +new Date();
+
+            // 判断上次触发的时间和本次触发的时间差是否小于时间间隔的阈值
+            if (now - last < delay) {
+                // 如果时间间隔小于我们设定的时间间隔阈值，则为本次触发操作设立一个新的定时器
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    last = now;
+                    fn.apply(context, args)
+                }, delay);
+            } else {
+                // 如果时间间隔超出了我们设定的时间间隔阈值，那就不等了，无论如何要反馈给用户一次响应
+                last = now;
+                fn.apply(context, args)
+            }
+        }
+    }
+
+    // 监听Scroll事件
+    // window.addEventListener('scroll', lazyLoad, false);
+    // document.addEventListener('scroll', throttle(() => lazyLoad(), 1000))
+    // document.addEventListener('scroll', debounce(() => lazyLoad(), 1000))
+    document.addEventListener('scroll', throttle2(() => lazyLoad(), 1000))
+
+    // 备注：学习知识资料来源：作者：修言 《前端性能优化原理与实践: https://juejin.im/book/5b936540f265da0a9624b04b》
+</script>
+</body>
+</html>
