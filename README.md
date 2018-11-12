@@ -29,6 +29,8 @@ November 06, 2018 » [实现数组方法原理实现](https://github.com/liangfe
 
 November 05, 2018 » [ES6-类](https://github.com/liangfengbo/initialjs/blob/master/es6-class.js)
 
-November 05, 2018 » [实战: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
+## 实战知识点
 
-November 05, 2018 » [实战: 实现图片懒加载与事件节流和防抖](https://github.com/liangfengbo/initialjs/blob/master/lazy-load.html)
+November 05, 2018 » [功能: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
+
+November 12, 2018 » [功能: 实现图片懒加载与事件节流和防抖](https://github.com/liangfengbo/initialjs/blob/master/lazy-load.html)
