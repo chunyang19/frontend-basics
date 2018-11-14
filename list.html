@@ -80,7 +80,7 @@
             this.el = Array.from(document.querySelectorAll(sel));
             let self = this;
             this.el.forEach(item => {
-                item.addEventListener('click', (e) => {
+                item.addEventListener('click', e => {
                     if (e.target.className.indexOf('del') > -1) {
                         self.removeItem.call(self, e.target);
                     }
@@ -90,7 +90,7 @@
 
         removeItem(target) {
             let self = this;
-            let findParent = (node) => {
+            let findParent = node => {
                 let {parentNode} = node;
                 let root = self.el.find(item => item === parentNode);
                 if (root) {
