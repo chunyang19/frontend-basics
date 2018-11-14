@@ -11,6 +11,12 @@
 
 # 内容列表 - Content List
 
+## 实战知识点
+
+November 05, 2018 » [功能: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
+
+November 12, 2018 » [功能: 实现图片懒加载与事件节流和防抖](https://github.com/liangfengbo/initialjs/blob/master/lazy-load.html)
+
 ## 《深入理解ES6》
 
 November 02, 2018 » [ES6-扩展对象的功能性](https://github.com/liangfengbo/initialjs/blob/master/es6-object.js)
@@ -30,9 +36,3 @@ November 06, 2018 » [实现数组方法原理实现](https://github.com/liangfe
 November 05, 2018 » [ES6-类](https://github.com/liangfengbo/initialjs/blob/master/es6-class.js)
 
 November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob/master/es6-promise.js)
-
-## 实战知识点
-
-November 05, 2018 » [功能: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
-
-November 12, 2018 » [功能: 实现图片懒加载与事件节流和防抖](https://github.com/liangfengbo/initialjs/blob/master/lazy-load.html)
