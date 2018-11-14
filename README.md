@@ -29,6 +29,8 @@ November 06, 2018 » [实现数组方法原理实现](https://github.com/liangfe
 
 November 05, 2018 » [ES6-类](https://github.com/liangfengbo/initialjs/blob/master/es6-class.js)
 
+November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob/master/es6-promise.js)
+
 ## 实战知识点
 
 November 05, 2018 » [功能: 使用ES6面向对象思想维护一个列表删除功能](https://github.com/liangfengbo/initialjs/blob/master/list.html)
