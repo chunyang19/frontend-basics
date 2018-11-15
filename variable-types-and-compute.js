@@ -115,7 +115,7 @@
      * JSON 是JS的对象
      */
     // 把对象转换为字符串
-    JSON.stringify({a: 10, b: 20});
+    console.log(JSON.stringify({a: 10, b: 20}));
     // 把字符串转换为对象
-    JSON.parse("{'a': 100, 'b': 20}");
+    console.log(JSON.parse('{"a": 100, "b": 20}'));
 }
