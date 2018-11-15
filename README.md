@@ -17,6 +17,8 @@ November 05, 2018 » [功能: 使用ES6面向对象思想维护一个列表删�
 
 November 12, 2018 » [功能: 实现图片懒加载与事件节流和防抖](https://github.com/liangfengbo/initialjs/blob/master/lazy-load.html)
 
+November 15, 2018 » [功能: CSS九宫格](https://github.com/liangfengbo/initialjs/blob/master/sudoku.html)
+
 ## 《深入理解ES6》
 
 November 02, 2018 » [ES6-扩展对象的功能性](https://github.com/liangfengbo/initialjs/blob/master/es6-object.js)
