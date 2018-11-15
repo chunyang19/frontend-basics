@@ -121,18 +121,6 @@
      * 写一个原型链继承的例子
      *
      */
-
-}
-
-
-{
-    /**
-     * 描述new一个对象的过程
-     * 1.创建一个新对象
-     * 2.this指向这个对象
-     * 3.执行代码，即对this赋值
-     * 4.返回this
-     */
     function Element(id) {
         this.element = document.getElementById(id);
     }
@@ -159,4 +147,17 @@
     div1.html(`<p>hello world</p>`).on('click', function () {
         console.log('clicked..');
     }).html(`<p>javascript</p>`)
+
+}
+
+
+{
+    /**
+     * 描述new一个对象的过程
+     * 1.创建一个新对象
+     * 2.this指向这个对象
+     * 3.执行代码，即对this赋值
+     * 4.返回this
+     */
+
 }
