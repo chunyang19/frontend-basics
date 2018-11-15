@@ -36,3 +36,7 @@ November 06, 2018 » [实现数组方法原理实现](https://github.com/liangfe
 November 05, 2018 » [ES6-类](https://github.com/liangfengbo/initialjs/blob/master/es6-class.js)
 
 November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob/master/es6-promise.js)
+
+## 《JavaScript高级程序设计(第三版)》
+
+November 15, 2018 » [变量类型与计算](https://github.com/liangfengbo/initialjs/blob/master/variable-types-and-compute.js)
