@@ -40,3 +40,5 @@ November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob
 ## 《JavaScript高级程序设计(第三版)》
 
 November 15, 2018 » [变量类型与计算](https://github.com/liangfengbo/initialjs/blob/master/variable-types-and-compute.js)
+
+November 15, 2018 » [原型与原型链](https://github.com/liangfengbo/initialjs/blob/master/prototype.js)
