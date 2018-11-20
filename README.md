@@ -1,14 +1,22 @@
-# Frontend Basics
+
+<p align="center"><a href="https://github.com/liangfengbo" target="_blank" rel="noopener noreferrer"><img width="100" src="https://avatars0.githubusercontent.com/u/26264225?s=460&v=4" alt="Vue logo"></a></p>
+
+
+<p align="center">
+  <a href="https://github.com/liangfengbo/frontend-basics/commits/master"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
+  <a href="https://github.com/liangfengbo/frontend-basics/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="Coverage Status"></a>
+</p>
+
+## 前端基础（Frontend Basics）
+
 - 回归最初的JS基本知识
 - 开源笔记都是基本知识，记录的代码比较艺术性，纯笔记，想深入，还是买本原书琢磨琢磨吧！
 
-# 📚知识来源 - 书籍(Books)
+## 📚知识来源 - 书籍(Books)
 - 书是人类进步的阶梯，电子书是人类进步的电梯。
 - 我计划先做完以下两本书籍的笔记，也推荐大家深度阅读这两本书。
 - 《深入理解ES6》
 - 《JavaScript高级程序设计(第三版)》
-
-# 内容列表 - Content List
 
 ## 实战知识点
 
@@ -43,3 +51,9 @@ November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob
 November 15, 2018 » [变量类型与计算](https://github.com/liangfengbo/initialjs/blob/master/JS/variable-types-and-compute.js)
 
 November 15, 2018 » [原型与原型链](https://github.com/liangfengbo/initialjs/blob/master/JS/prototype.js)
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2018 Fengbo Liang
