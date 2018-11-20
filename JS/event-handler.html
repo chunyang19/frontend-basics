@@ -28,6 +28,7 @@
 <section class="box">
     <button class="btn" id="dom-0">dom-0级点击</button>
     <button class="btn" id="dom-2">dom-2级点击</button>
+    <button class="btn" id="remove-dom-2">移除dom-2级事件</button>
     <input type="text" id="input">
     <button class="btn" id="btn-click">点击事件</button>
     <button class="btn" id="btn-mouseup">鼠标释放事件</button>
@@ -54,6 +55,17 @@
         console.log("DOM2事件触发");
         console.log(e);
     }, true); // false => 冒泡; true => 捕获
+
+
+    function handler() {
+        console.log("hello handler!");
+    }
+
+    var removeDom2 = document.getElementById("remove-dom-2");
+    // DOM2绑定事件
+    removeDom2.addEventListener("click", handler, false);
+    // 移除绑定事件
+    removeDom2.removeEventListener("click", handler, false);
 
     // dom3级
     var input = document.getElementById("input");

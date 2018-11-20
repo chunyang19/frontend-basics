@@ -55,6 +55,8 @@ November 14, 2018 » [ES6-Promise](https://github.com/liangfengbo/initialjs/blob
 
 November 20, 2018 » [事件流](https://github.com/liangfengbo/initialjs/blob/master/JS/event-flow.html)
 
+November 20, 2018 » [事件类型](https://github.com/liangfengbo/initialjs/blob/master/JS/event-handler.html)
+
 November 15, 2018 » [变量类型与计算](https://github.com/liangfengbo/initialjs/blob/master/JS/variable-types-and-compute.js)
 
 November 15, 2018 » [原型与原型链](https://github.com/liangfengbo/initialjs/blob/master/JS/prototype.js)
