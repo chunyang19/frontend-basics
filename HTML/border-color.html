@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-color</title>
+    <style>
+        .box {
+            margin: 32px;
+        }
+
+        .add {
+            cursor: pointer;
+            position: relative;
+            color: #989898;
+            height: 120px;
+            width: 120px;
+            border-radius: 4px;
+            border: 1px dotted;
+            transition: color linear 0.1s;
+        }
+
+        .add:before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 58px;
+            left: 20px;
+            width: 80px;
+            border-radius: 2px;
+            border-top: 6px solid;
+        }
+
+        .add:after {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 58px;
+            left: 20px;
+            width: 80px;
+            border-radius: 2px;
+            transform: rotate(90deg);
+            border-bottom: 6px solid;
+        }
+
+        /*border-color 等于 color的颜色*/
+        .add:hover {
+            color: #2d8cf0;
+        }
+    </style>
+</head>
+<body>
+<article class="box">
+    <div class="add"></div>
+</article>
+</body>
+</html>

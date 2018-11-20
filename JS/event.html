@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+    <style>
+        .btn {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 4px;
+            color: #fff;
+            transition: background-color linear 0.1s;
+            background-color: #2d8cf0;
+        }
+
+        .btn:hover {
+            background-color: #5cadff;
+        }
+    </style>
+</head>
+<body>
+<!--DOM0-->
+<section class="box">
+    <button class="btn" id="dom-0">dom-0级点击</button>
+    <button class="btn" id="dom-2">dom-2级点击</button>
+    <input type="text" id="input">
+    <button class="btn" id="btn-click">点击事件</button>
+    <button class="btn" id="btn-mouseup">鼠标释放事件</button>
+    <button class="btn" id="btn-dblclick">双击事件</button>
+    <button class="btn" id="btn-mousedown">鼠标按下事件</button>
+    <button class="btn" id="btn-mouseenter">鼠标移入事件</button>
+    <button class="btn" id="btn-mouseover">鼠标移入事件</button>
+    <button class="btn" id="btn-mouseleave">鼠标移出事件</button>
+    <button class="btn" id="btn-mouseout">鼠标移出事件</button>
+    <button class="btn" id="btn-mousemove">鼠标移动事件</button>
+    <button class="btn" id="output">output</button>
+</section>
+<script>
+    // dom0级
+    var dom0 = document.getElementById("dom-0");
+    dom0.onclick = function (e) {
+        console.log("DOM0事件触发");
+        console.log(e);
+    }
+
+    // dom2级
+    var dom2 = document.getElementById("dom-2");
+    dom2.addEventListener('click', function (e) {
+        console.log("DOM2事件触发");
+        console.log(e);
+    }, true); // false => 冒泡; true => 捕获
+
+    // dom3级
+    var input = document.getElementById("input");
+
+    // 聚焦事件
+    input.addEventListener('focus', function (e) {
+        console.log('聚焦事件');
+        console.log(e);
+    }, false);
+
+    // 失去焦点事件
+    input.addEventListener('blur', function (e) {
+        console.log('失去焦点事件');
+        console.log(e);
+    }, false);
+
+    /**
+     * 鼠标与滚轮事件
+     */
+
+    // 点击事件click
+    document.getElementById("btn-click").addEventListener("click", function (e) {
+        console.log("点击事件");
+    }, false);
+
+    // 双击事件
+    document.getElementById("btn-dblclick").addEventListener("dblclick", function (e) {
+        console.log("双击事件");
+    }, false);
+
+    // 鼠标按下事件
+    document.getElementById("btn-mousedown").addEventListener("mousedown", function (e) {
+        console.log('鼠标按下事件');
+    }, false);
+
+    // 鼠标释放事件
+    document.getElementById("btn-mouseup").addEventListener("mouseup", function (e) {
+        console.log('鼠标释放事件');
+    })
+
+    // 鼠标移入事件
+    document.getElementById("btn-mouseenter").addEventListener("mouseenter", function (e) {
+        console.log('鼠标移入事件');
+    });
+
+    // 鼠标移入事件2
+    document.getElementById("btn-mouseover").addEventListener("mouseover", function (e) {
+        console.log('鼠标移入事件');
+    })
+
+    // 鼠标移出事件
+    document.getElementById("btn-mouseleave").addEventListener("mouseleave", function (e) {
+        console.log('鼠标移出事件');
+    });
+
+    // 鼠标移出事件
+    document.getElementById("btn-mouseout").addEventListener("mouseout", function (e) {
+        console.log('鼠标移出事件');
+    })
+
+    // 鼠标移动事件
+    document.getElementById("btn-mousemove").addEventListener("mousemove", function (e) {
+        console.log('鼠标移动事件');
+    })
+</script>
+</body>
+</html>

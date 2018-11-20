@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件流</title>
+</head>
+<body>
+<section class="box">
+    <button class="btn" id="btn">事件流点击</button>
+    <script>
+        /**
+         * 事件流描述的是从页面中接收事件的顺序：1.IE事件冒泡流 2.Netscape 捕获流
+         *
+         * 冒泡流：从最具体相关的到最不具体相关的
+         * 捕获流：从最不具体的到最具体的
+         */
+
+        /**
+         * “DOM2级事件”规定的事件流包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段。
+         * 首先发生的是事件捕获，为截获事件提供了机会。
+         * 然后是实际的目标接收到事件。
+         * 最后一个阶段是冒泡阶段，可以在这个阶段对事件做出响应。
+         *
+         * window => 捕获流
+         * html => 捕获流
+         * body => 捕获流
+         * click => 捕获流
+         * click => 冒泡流
+         * body => 冒泡流
+         * html => 冒泡流
+         * window => 冒泡流
+         */
+
+        // window
+        window.addEventListener("click", function (e) {
+            console.log("window => 捕获流");
+        }, true);
+
+        // html
+        document.documentElement.addEventListener("click", function (e) {
+            console.log("html => 捕获流");
+        }, true);
+
+        // body
+        document.body.addEventListener("click", function (e) {
+            console.log("body => 捕获流");
+        }, true);
+
+        // button
+        document.getElementById("btn").addEventListener("click", function (e) {
+            console.log("click => 捕获流");
+        }, true);
+
+        // button
+        document.getElementById("btn").addEventListener("click", function (e) {
+            console.log("click => 冒泡流");
+        }, false);
+
+        // body
+        document.body.addEventListener("click", function (e) {
+            console.log("body => 冒泡流");
+        }, false);
+
+        // html
+        document.documentElement.addEventListener("click", function (e) {
+            console.log("html => 冒泡流");
+        }, false);
+
+        // window
+        window.addEventListener("click", function (e) {
+            console.log("window => 冒泡流");
+        }, false);
+    </script>
+</section>
+</body>
+</html>
